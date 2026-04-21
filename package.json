@@ -1,7 +1,8 @@
 {
-  "name": "web",
+  "name": "simple-web-app",
   "version": "0.1.0",
   "private": true,
+  "description": "Educational Next.js demo mapping frontend/backend pieces; npm scripts run local dev for $0.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,26 +1,43 @@
+/* Tailwind v4 entry: pulls framework */
 @import "tailwindcss";
 
+/* root vars: light theme defaults */
 :root {
+  /* page bg token */
   --background: #ffffff;
+  /* text fg token */
   --foreground: #171717;
 }
 
+/* map tokens to Tailwind theme (inline) */
 @theme inline {
+  /* bg color */
   --color-background: var(--background);
+  /* fg color */
   --color-foreground: var(--foreground);
+  /* sans stack hook */
   --font-sans: var(--font-geist-sans);
+  /* mono stack hook */
   --font-mono: var(--font-geist-mono);
 }
 
+/* dark prefers: swap tokens no flash if OS dark */
 @media (prefers-color-scheme: dark) {
+  /* dark root */
   :root {
+    /* dark bg */
     --background: #0a0a0a;
+    /* dark fg */
     --foreground: #ededed;
   }
 }
 
+/* body baseline typography */
 body {
+  /* bg from token */
   background: var(--background);
+  /* fg from token */
   color: var(--foreground);
+  /* fallback fonts before webfont */
   font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,27 +1,44 @@
 {
+  // TS project for Next App Router + strict checks
   "compilerOptions": {
+    // emit level modern enough for browsers
     "target": "ES2017",
+    // types available in app + modern syntax
     "lib": ["dom", "dom.iterable", "esnext"],
+    // allow js if mixed
     "allowJs": true,
+    // faster builds skip d.ts deep check
     "skipLibCheck": true,
+    // strict null etc on
     "strict": true,
+    // next compiles; tsc no emit
     "noEmit": true,
+    // CJS default import interop
     "esModuleInterop": true,
+    // ESM output
     "module": "esnext",
+    // bundler resolution for next
     "moduleResolution": "bundler",
+    // import json as modules
     "resolveJsonModule": true,
+    // each file standalone transpile
     "isolatedModules": true,
+    // new JSX transform
     "jsx": "react-jsx",
+    // tsbuildinfo cache
     "incremental": true,
+    // next plugin for typed routes
     "plugins": [
       {
         "name": "next"
       }
     ],
+    // alias @ to src
     "paths": {
       "@/*": ["./src/*"]
     }
   },
+  // files included in project
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -30,5 +47,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
+  // exclude deps
   "exclude": ["node_modules"]
 }
